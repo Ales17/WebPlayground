@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Park Jičín</title>
+  </head>
+  <body id="body">
+    <h1>Zadávání zaměstnanců</h1>
+    <form id="emp-form">
+      <div class="field">
+        <label for="name">Jméno</label>
+        <input type="text" name="empname" placeholder="Pracovník" id="" />
+      </div>
+
+      <div class="field">
+        <label for="timebegin">Příchod</label>
+        <input
+          type="number"
+          max="24"
+          maxlength="2"
+          placeholder="Hodina, např. 10"
+          name="timebegin"
+          id=""
+        />
+      </div>
+
+      <div class="field">
+        <label for="timeend">Odchod</label>
+        <input
+          type="number"
+          max="24"
+          maxlength="2"
+          name="timeend"
+          placeholder="Hodina, např. 20"
+          id=""
+        />
+      </div>
+      <input type="submit" value="Přidat" />
+    </form>
+
+    <div id="emps"></div>
+
+    <div id="total-time"></div>
+
+    <h1>Výpočet podílu na tržbě</h1>
+    <form id="amount-form">
+      <div class="field">
+        <label for="amount">Denní tržba</label>
+        <input type="number" name="amount" />
+      </div>
+      <input type="submit" value="Vypočítat" />
+    </form>
+
+    <div id="tips"></div>
+    <footer>Copyright © Aleš Bacul, 2022</footer>
+    <!-- 
+    <button type="button" id="send-mail">Pošli mail</button> -->
+    <script src="script.js"></script>
+  </body>
+</html>

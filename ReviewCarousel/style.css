@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+  --main: rgb(106, 195, 83);
+  --hover: rgb(33, 129, 33);
+  --background: #f3f8f17b;
+}
+#rw-job {color: var(--main);}
+#rw-text{text-align:   center}
+
+body {
+  background: var(--background);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+#review-box {
+  line-height: 1.5rem;
+  width: 55rem;
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+.rw-img-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+#rw-person-img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+.rw-img-container::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f10e";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background: var(--main);
+  color: #fff;
+}
+.rw-img-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--main);
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+}
+
+#btn-prev,
+#btn-next {
+  color: var(--main);
+  font-size: 1.25rem;
+  background: transparent;
+  border-color: transparent;
+  margin: 0 0.5rem;
+
+  cursor: pointer;
+}
+#btn-prev:hover,
+#btn-next:hover {
+  color: var(--hover);
+}

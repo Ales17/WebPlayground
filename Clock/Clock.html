@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <title>Clock</title>
+    <style>
+      html,
+      body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background: #000;
+        font-family: "Orbitron", sans-serif;
+      }
+      .clock {
+        user-select: none;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15vw;
+        color: #3ac30b;
+      }
+    </style>
+  </head>
+  <body>
+    <div onload="refreshTime()" class="clock" id="time"></div>
+
+    <script>
+      let timeDisplay = document.getElementById("time");
+      function addZero(i) {
+        if (i < 10) {
+          i = "0" + i;
+        }
+        return i;
+      }
+
+      function refreshTime() {
+        let dateString = new Date();
+        let h = addZero(dateString.getHours());
+        let min = addZero(dateString.getMinutes());
+        let s = addZero(dateString.getSeconds());
+
+        timeDisplay.textContent = `${h}:${min}:${s}`;
+      }
+
+      setInterval(refreshTime, 1000);
+    </script>
+  </body>
+</html>
