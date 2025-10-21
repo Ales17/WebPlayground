@@ -1,0 +1,69 @@
+:root {
+    --menu-btn-w: 50px;
+    --menu-btn-h: var(--menu-btn-w);
+    --menu-btn-icon-height: calc(var(--menu-btn-w) / 7);
+}
+
+/*
+        MENU BUTTON COMMONS
+        */
+
+.menu-btn {
+    width: var(--menu-btn-w);
+    height: var(--menu-btn-h);
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    gap: var(--menu-btn-icon-height);
+    justify-content: center;
+}
+
+.menu-btn div {
+    width: 100%;
+    height: var(--menu-btn-icon-height);
+    background: blue;
+}
+
+.menu-btn {
+    position: relative;
+}
+
+.menu-btn.menu-btn.close {
+    display: block;
+}
+
+.menu-btn.close div:nth-child(1),
+#menu-btn-cb:checked~label .first {
+    transform: rotate(45deg);
+    position: absolute;
+    top: calc(50% - var(--menu-btn-icon-height) * 0.5);
+}
+
+.menu-btn.close div:nth-child(3),
+#menu-btn-cb:checked~label .third {
+    transform: rotate(135deg);
+    position: absolute;
+    top: calc(50% - var(--menu-btn-icon-height) * 0.5);
+}
+
+.menu-btn.close div:nth-child(2),
+#menu-btn-cb:checked~label .second {
+    display: none;
+}
+
+nav {
+    display: none;
+}
+
+#menu-btn-cb {
+    display: none;
+}
+
+#menu-btn-cb:checked+label+nav {
+    display: block;
+}
+
+/*MENU JS*/
+nav.js.active {
+    display: block;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Otevírání menu přes čisté HTML & CSS (bez JS)</h2>
+    <input type="checkbox" name="menu-btn-cb" id="menu-btn-cb" />
+    <!-- Custom menu btn -->
+    <label for="menu-btn-cb">
+      <div class="menu-btn">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+      </div>
+    </label>
+    <nav>Zde bude menu otevřené bez JS</nav>
+    <hr />
+    <h2>Otevírání menu pomocí JS</h2>
+    <div class="menu-btn js">
+      <div class="first"></div>
+      <div class="second"></div>
+      <div class="third"></div>
+    </div>
+    <nav class="js">Zde bude menu otevřené pomocí JS</nav>
+    <script src="script.js"></script>
+  </body>
+</html>
