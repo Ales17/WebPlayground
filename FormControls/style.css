@@ -1,0 +1,79 @@
+:root {
+    --toggle-dimensions: 16px;
+    --toggle-padding: calc(var(--toggle-dimensions) / 6);
+    --toggle-off: grey;
+    --toggle-active: #22b666;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+div.switch {
+    background: var(--toggle-off);
+    padding: var(--toggle-padding);
+    padding-right: var(--toggle-dimensions);
+    transition: padding 500ms;
+    border-radius: 100px;
+}
+
+.ab-radio {
+    background: var(--toggle-off);
+    padding: var(--toggle-padding);
+    border-radius: 50%;
+}
+
+.ab-controls {
+    height: var(--toggle-dimensions);
+    width: var(--toggle-dimensions);
+
+    display: inline-block;
+    box-sizing: content-box;
+}
+
+.ab-circle {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.ab-radio-circle {
+    background: var(--toggle-off);
+}
+
+.toggle {
+    background: white;
+}
+
+.ab-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.ab-toggle input[type="checkbox"]:checked+label>.switch {
+    background: var(--toggle-active);
+    padding: var(--toggle-padding);
+    padding-left: var(--toggle-dimensions);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type="radio"]:checked+label .ab-circle {
+    background-color: white;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="email"] {
+    height: 2rem;
+    font-size: 1.25rem;
+    display: block;
+}
