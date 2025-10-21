@@ -1,0 +1,40 @@
+      /*
+        Details & Summary Tweaked
+        */
+      .ab-expand {
+          display: inline-block;
+          font-weight: bold;
+          font-size: 2.4rem;
+      }
+
+      summary {
+          user-select: none;
+      }
+
+      details summary::after {
+          display: block;
+          content: "Rozbalit";
+      }
+
+      details[open] summary::after {
+          content: "Sbalit";
+      }
+
+      details summary {
+          display: block;
+          width: 5rem;
+          text-align: center;
+          margin: 0 auto;
+          transition: margin 150ms ease-out;
+      }
+
+      details summary::before {
+          content: "+";
+          display: inline-block;
+          font-weight: bold;
+          font-size: 2.4rem;
+      }
+
+      details[open] summary::before {
+          transform: rotate(45deg);
+      }
